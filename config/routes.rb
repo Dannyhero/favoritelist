@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   root to: 'toppages#index'
 
   get 'login', to: 'sessions#new'
@@ -12,4 +13,6 @@ Rails.application.routes.draw do
   resources :ownerships, only: [:create, :destroy]
   
   get 'rankings/want', to: 'rankings#want'
+  get 'rankings/have', to: 'rankings#have'
+  
 end
